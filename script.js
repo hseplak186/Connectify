@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended : true}));  //it used to parse the data fro
 app.use(methodOverride("_method"));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/Connectify');
+    await mongoose.connect(process.env.DATABASE_URL);
 }
 main()
 .then(() => {

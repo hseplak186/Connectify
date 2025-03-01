@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Chat = require("./models/chat.js");
 
 async function main() {
-    await mongoose.connect(process.env.DATABASE_URL);
+    await mongoose.connect("mongodb+srv://kalpesh:kalpesh123@chat-app.tom4d.mongodb.net/?retryWrites=true&w=majority&appName=chat-app");
 }
 main()
 .then(() => {
